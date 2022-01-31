@@ -25,7 +25,7 @@ async def clone(event):
         return
     s, r = await force_sub(event.client, fs, event.sender_id)
     if s == True:
-        await event.reply(r)
+        await event.reply('roll')
         return
     edit = await event.reply('⏳')
     if 't.me/+' in link:
