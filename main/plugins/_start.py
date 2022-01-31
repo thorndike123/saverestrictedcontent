@@ -47,7 +47,7 @@ async def remt(event):
     except Exception:
         await event.edit("No thumbnail saved.")                        
   
-@bot.on(events.NewMessage(incoming=True, pattern="/start"))
+@Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
