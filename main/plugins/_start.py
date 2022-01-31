@@ -11,6 +11,8 @@ from ethon.mystarts import start_srb
     
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
+st = "**Hii,\nI am @Pyrogrammers Save restricted Contents bot.**\nSend me any public or private restricted Channel post link.\nI will give you that post.\n**Hit /help to know more.**"
+
 @Drone.on(events.callbackquery.CallbackQuery(data="set"))
 async def sett(event):    
     Drone = event.client                    
