@@ -27,7 +27,7 @@ async def clone(event):
     if s == True:
         await event.reply(r)
         return
-    edit = await event.reply('Trying to process.')
+    edit = await event.reply('⏳')
     if 't.me/+' in link:
         x, y = await join(userbot, link)
         await edit.edit(y)
@@ -36,7 +36,7 @@ async def clone(event):
         if not 't.me/c/' in link:
             chat =  link.split("/")[-2]
             msg_id = link.split("/")[-1]
-            await edit.edit(f'cloning {chat}-{msg_id}')
+            await edit.edit(f'⏳')
         if 't.me/c/' in link:
              try:
                  chat =  int('-100' + str(link.split("/")[-2]))
