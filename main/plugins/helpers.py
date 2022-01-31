@@ -11,7 +11,7 @@ async def join(client, invite_link):
     try:
         hash_ = invite_link.split("+")[1]
         await client(ImportChatInviteRequest(hash_))
-        return True, "Successfully joined the Channel."
+        return True, "✅ **This channel is now supported, Now send me post link to get that post.**"
     except errors.UserAlreadyParticipantError:
         return False, "You have already joined the Channel."
     except errors.InviteHashExpiredError:
