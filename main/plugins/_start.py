@@ -63,4 +63,8 @@ async def start(event):
             pass
         else:
             return
-    
+    # start help Message
+@bot.on(events.NewMessage(pattern="^/help$"))
+async def search(event):
+    await event.reply('<b><u>For Public Restricted Channel contents.</b></u>\nTo get public restricted Channel contents, just send your Post link i will give you that post without Downloading.\n\n<b><u>For Private Restricted Channel contents.</b></u>\nTo get private restricted Channel contents, First send me Channel invite link so that i can join your channel after that send me post link of your restricted Channel to get that post.', parse_mode="HTML")
+    #end help Message
