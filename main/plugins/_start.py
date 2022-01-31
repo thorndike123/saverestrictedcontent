@@ -47,9 +47,14 @@ async def remt(event):
     except Exception:
         await event.edit("No thumbnail saved.")                        
   
-@Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
+@bot.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await start_srb(event)
+    await event.reply(f'{st}', 
+                      buttons=[
+                        [Button.url("Updates Channel", url="https://t.me/pyrogrammers"),
+                         Button.url("Support Group", url="https://t.me/+7ScFy39Vckk5MWQ1")],
+                        [Button.url("YouTube Channel", url="https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw")],
+                    ])
     try:
         await Bot.start()
         await idle()
@@ -57,6 +62,5 @@ async def start(event):
         if 'Client is already connected' in str(e):
             pass
         else:
-            await event.client.send_message(event.chat_id, "Error while starting bot using pyrogram.Client")
             return
     
